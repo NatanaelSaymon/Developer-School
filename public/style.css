@@ -36,23 +36,31 @@ header div.links a + a{
 
 }
 
+header div.links a.active{
+    color: var(--primary-color);
+}
+
 header div.links a{
     text-decoration: none;
     color: #777;
     position: relative;
 }
 
-header div.links a.active{
-    
-    color: var(--primary-color);
-}
-
-header div.links a:hover::after{
+header div.links a::after{
     content: "";
-    width: 100%;
+    width: 0;
     height: 2px;
     background: var(--primary-color);
     position: absolute; /*ao aplicar o position absolute, temos que aplicar o position relative no pai*/
     left: 0;
     bottom: -4px;
 }
+
+header div.links a:hover::after{
+    width: 100%;
+    transition: width 700ms cubic-bezier(1, 0.15, 0.72, 0.95);
+}
+
+
+
+
