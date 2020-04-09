@@ -140,7 +140,7 @@ section.details h3 {
     color: var(--primary-color);
 }
 
-section.details .item span{
+section.details div.item span{
     display: inline-block;
     padding: 8px 16px;
     background-color: var(--secondary-color);
