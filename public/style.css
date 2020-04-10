@@ -143,9 +143,9 @@ section.details h3 {
 section.details div.item span{
     display: inline-block;
     padding: 8px 16px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     border-radius: 16px;
-    color: #777;
+    color: #ffffff;
     margin-right: 4px;
     margin-top: 8px;
     font-weight: bold;
@@ -154,4 +154,34 @@ section.details div.item span{
 
 }
 
+/* === PAGE CREATE FORM ===*/
+
+form div.item input{
+    width: 100%;
+    outline: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+form div.item input[type="radio"]{
+    width: initial;
+    margin-right: 4px;
+}
+
+form div.item input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+form button[type="submit"]{
+    padding: 8px 32px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    margin-top: 32px;
+    width: 100%;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+}
 
