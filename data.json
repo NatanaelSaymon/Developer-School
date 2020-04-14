@@ -1,1 +1,11 @@
-{"avatar_url":"http://google.com","name":"Mateus","birth":"1999-02-15","gender":"M","services":"Ginastica"}
+{
+  "instructors": [
+    {
+      "avatar_url": "http://google.com",
+      "name": "Pedro",
+      "birth": "1010-10-10",
+      "gender": "M",
+      "services": "Dança"
+    }
+  ]
+}
