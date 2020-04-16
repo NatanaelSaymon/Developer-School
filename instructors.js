@@ -10,12 +10,22 @@ exports.post = function(req, res){
       return res.send("Por favor, preencha todos os campos!")
     }
   }
+  
+  let {avatar_url, name, birth, services, gender } = req.body
 
-  req.body.id = Number(data.instructors.length + 1)
-  req.body.birth = Date.parse(req.body.birth)
-  req.body.created_at = Date.now() //cria uma data no momento em que está sendo salvo.
+  birth = Date.parse(req.body.birth)
+  const id = Number(data.instructors.length + 1)
+  const created_at = Date.now() //cria uma data no momento em que está sendo salvo.
 
-  data.instructors.push(req.body) //adiciona objetos no data.JSON
+  data.instructors.push({
+    id,
+    avatar_url,
+    name,
+    birth,
+    gender,
+    services,
+    created_at
+  }) //adiciona objetos no data.JSON
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if(err){
