@@ -11,6 +11,10 @@ exports.post = function(req, res){
     }
   }
 
+  req.body.id = Number(data.instructors.length + 1)
+  req.body.birth = Date.parse(req.body.birth)
+  req.body.created_at = Date.now() //cria uma data no momento em que está sendo salvo.
+
   data.instructors.push(req.body) //adiciona objetos no data.JSON
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
