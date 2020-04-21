@@ -1,6 +1,23 @@
 const fs = require('fs')
 const data = require('./data.json')
 
+//show
+
+exports.show = function(req, res){
+  const { id } = req.params //desestruturando: retirando o ID de req.params e fazendo que seja uma variavel.
+
+  const foundInstructor = data.instructors.find(function(instructor){
+    return instructor.id == id
+  })
+
+  if(!foundInstructor){
+    return res.send('Instrutor não encontrado, por favor, tente novamente!')
+  }
+
+  return res.render("instructors/show", { instructor: foundInstructor })
+}
+
+
 //creat
 exports.post = function(req, res){
   const keys = Object.keys(req.body)
@@ -11,7 +28,7 @@ exports.post = function(req, res){
     }
   }
   
-  let {avatar_url, name, birth, services, gender } = req.body
+  let { avatar_url, name, birth, services, gender } = req.body
 
   birth = Date.parse(req.body.birth)
   const id = Number(data.instructors.length + 1)
@@ -34,7 +51,7 @@ exports.post = function(req, res){
 
     return res.redirect("/instructors")
   })
-  //return res.send(req.body)
+  
 }
 
 //update
