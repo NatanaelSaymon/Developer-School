@@ -2,7 +2,6 @@ const fs = require('fs')
 const data = require('./data.json')
 
 //show
-
 exports.show = function(req, res){
   const { id } = req.params //desestruturando: retirando o ID de req.params e fazendo que seja uma variavel.
 
@@ -14,7 +13,16 @@ exports.show = function(req, res){
     return res.send('Instrutor não encontrado, por favor, tente novamente!')
   }
 
+  const instructor = {
+    ...foundInstructor,
+    birth: "",
+    gender: "",
+    services: "",
+    created_at: ""
+  }
+
   return res.render("instructors/show", { instructor: foundInstructor })
+
 }
 
 
