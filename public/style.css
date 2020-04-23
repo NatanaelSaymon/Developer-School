@@ -97,12 +97,12 @@ header div.links a:hover::after{
     }
 }
 
-/* section.avatar{
-    background-image: url('https://source.unsplash.com/collection/3465564/500x500');
+section.avatar{
+    /* background-image: url('https://source.unsplash.com/collection/3465564/500x500'); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-} */
+}
 
 /* === DETAILS === */
 

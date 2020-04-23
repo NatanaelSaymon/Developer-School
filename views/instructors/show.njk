@@ -5,9 +5,10 @@
   <div class="card">
     <section 
       class="avatar"
-      style="background: url({{ instructor.avatar_url }}) no-repeate center center / cover"
-    >
+      style="background-image: url({{ instructor.avatar_url }})"
       
+    >
+      <!--style="background: url({{ instructor.avatar_url }}) no-repeate center center / cover"-->
     </section>
 
     <section class="details">
@@ -20,19 +21,19 @@
 
       <div class="item">
         <div>Idade</div>
-        <div>{{ instructor.birth }}</div>
+        <div>{{ instructor.age }} anos</div>
       </div>
 
       <div class="item">
         <div>Sexo</div>
-        <div>{{ instructor.gender }}</div>
+        <div>{{ "Masculino" if instructor.gender == "M" else "Feminino" }}</div>
       </div>
 
       <div class="item">
         <div>Acompanhamento</div>
         <div>
           {% for service in instructor.services %}
-            <span>{{ instructor.services }}</span>
+            <span>{{ service }}</span>
           {% endfor %}
         </div>
       </div>
