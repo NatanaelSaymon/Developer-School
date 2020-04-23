@@ -174,7 +174,7 @@ form div.item input::placeholder{
     font-weight: normal;
 }
 
-form button[type="submit"]{
+form button[type="submit"], a.button{
     padding: 8px 32px;
     background-color: var(--primary-color);
     border-radius: 4px;
@@ -183,5 +183,13 @@ form button[type="submit"]{
     cursor: pointer;
     color: #ffffff;
     font-size: 16px;
+}
+
+a.button{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
