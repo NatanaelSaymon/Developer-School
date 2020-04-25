@@ -1,21 +1,32 @@
 <div class="item">
   <div>Avatar URL</div>
   <div>
-    <input type="url" name="avatar_url" placeholder="http://">
+    <input 
+      type="url" 
+      name="avatar_url" 
+      placeholder="http://" 
+      value="{{ instructor.avatar_url }}">
   </div>
 </div>
 
 <div class="item">
   <div>Instrutor</div>
   <div>
-    <input type="text" name="name" placeholder="Nome do instrutor">
+    <input 
+      type="text" 
+      name="name" 
+      placeholder="Nome do instrutor" 
+      value="{{ instructor.name }}">
   </div>
 </div>
 
 <div class="item">
-  <div>Idade</div>
+  <div>Data de nascimento</div>
   <div>
-    <input type="date" name="birth">
+    <input 
+      type="date" 
+      name="birth"
+      value="{{ instructor.birth }}">
   </div>
 </div>
 
@@ -23,12 +34,24 @@
   <div>Sexo</div>
   <div>
     <span>
-      <input type="radio" name="gender" value="M" checked>
-      Masculino
+      <input 
+        type="radio" 
+        name="gender" 
+        value="M" 
+        {% if instructor.gender == "M" %}
+          checked
+        {% endif %}>
+        Masculino
     </span>
     <span>
-      <input type="radio" name="gender" value="F">
-      Feminino
+      <input 
+        type="radio" 
+        name="gender" 
+        value="F"
+        {% if instructor.gender == "F" %}
+          checked
+        {% endif %}>
+        Feminino
     </span>
   </div>
 </div>
@@ -36,7 +59,10 @@
 <div class="item">
   <div>Área de atuação</div>
   <div>
-      <input type="text" name="services" placeholder="Separe os serviços prestados por vígurla!">
+      <input 
+        type="text" 
+        name="services" 
+        value="{{ instructor.services }}">
   </div>
 </div>
 
