@@ -57,11 +57,11 @@ exports.post = function(req, res){
   }
   
   let { avatar_url, name, birth, services, gender } = req.body
-
+  
   birth = Date.parse(req.body.birth)
   const id = Number(data.instructors.length + 1)
   const created_at = Date.now() //cria uma data no momento em que está sendo salvo.
-
+  
   data.instructors.push({
     id,
     avatar_url,
@@ -76,7 +76,6 @@ exports.post = function(req, res){
     if(err){
       return res.send("Erro de escrita!")
     }
-
     return res.redirect("/instructors")
   })
   
