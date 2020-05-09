@@ -115,5 +115,24 @@ exports.put = function(req, res){
 
 }
 
+// DELETE
+exports.delete = function(req, res){
+  const { id } = req.body
+
+  //Filter = metodo que filtra as informações
+  const filterdInstructors = data.instructors.filter(function(instructor){
+    return instructor.id != id
+  })
+
+  data.instructors = filterdInstructors
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
+    if(err){
+      return res.send("Escrita Errada!")
+    }
+    return res.redirect('/instructors')
+  })
+}
+
 
 

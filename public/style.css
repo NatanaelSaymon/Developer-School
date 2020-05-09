@@ -185,6 +185,11 @@ form button[type="submit"], a.button{
     font-size: 16px;
 }
 
+#form-delete button[type="submit"]{
+    background-color: crimson;
+    margin-top: 8px;
+}
+
 a.button{
     display: block;
     text-align: center;
