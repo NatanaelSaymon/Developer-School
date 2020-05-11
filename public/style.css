@@ -217,6 +217,12 @@ a.button{
     border-bottom: 2px solid #d9d9d9;
 }
 
+.table-container th{
+    text-transform: uppercase;
+    color: #777;
+    font-size: 14px;
+}
+
 .table-container tbody tr:last-child td{
     border-bottom: none;
 }
@@ -235,4 +241,19 @@ tbody tr td:first-child span{
     border-radius: 50%;
     box-shadow: 3px 1px 6px -4px #000;
     border: 2px solid #fff;
+}
+
+tbody tr td:last-child a{
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.table-container thead tr th:last-child,
+td:last-child{
+    text-align: center;
 }
