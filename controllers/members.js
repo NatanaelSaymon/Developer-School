@@ -1,14 +1,19 @@
 const fs = require('fs')
-const data = require('./data.json')
-const { age, date } = require('./utils')
+const data = require('../data.json')
+const { age, date } = require('../utils')
 
 // INDEX
 exports.index = function(req, res){
-  return res.render('instructors/index', { instructors: data.instructors })
+  return res.render('members/index', { members: data.members })
+}
+
+// CREATE
+exports.create = function(req, res){
+  return res.render('members/create')
 }
 
 
-//CREATE
+// POST
 exports.post = function(req, res){
   const keys = Object.keys(req.body)
 
@@ -21,10 +26,10 @@ exports.post = function(req, res){
   let { avatar_url, name, birth, services, gender } = req.body
   
   birth = Date.parse(req.body.birth)
-  const id = Number(data.instructors.length + 1)
+  const id = Number(data.members.length + 1)
   const created_at = Date.now() //cria uma data no momento em que está sendo salvo.
   
-  data.instructors.push({
+  data.members.push({
     id,
     avatar_url,
     name,
@@ -38,86 +43,84 @@ exports.post = function(req, res){
     if(err){
       return res.send("Erro de escrita!")
     }
-    return res.redirect("/instructors")
+    return res.redirect("/members")
   })
   
 }
 
-//SHOW
+// SHOW
 exports.show = function(req, res){
   const { id } = req.params //desestruturando: retirando o ID de req.params e fazendo que seja uma variavel.
 
-  const foundInstructor = data.instructors.find(function(instructor){
-    return instructor.id == id
+  const foundMember = data.members.find(function(member){
+    return member.id == id
   })
 
-  if(!foundInstructor){
-    return res.send('Instrutor não encontrado, por favor, tente novamente!')
+  if(!foundMember){
+    return res.send('Membro não encontrado, por favor, tente novamente!')
   }
   
   //Ajustando os dados
-  const instructor = {
-    ...foundInstructor,
-    age: age(foundInstructor.birth),
-    services: foundInstructor.services.split(","),
-    created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at)
+  const member = {
+    ...foundMember,
+    age: age(foundMember.birth)
   }
 
-  return res.render("instructors/show", { instructor })
+  return res.render("members/show", { member })
 
 }
 
-//EDIT
+// EDIT
 exports.edit = function(req, res){
   const { id } = req.params 
 
-  const foundInstructor = data.instructors.find(function(instructor){
-    return instructor.id == id
+  const foundMember = data.members.find(function(member){
+    return member.id == id
   })
 
-  if(!foundInstructor){
-    return res.send('Instrutor não encontrado, por favor, tente novamente!')
+  if(!foundMember){
+    return res.send('Membro não encontrado, por favor, tente novamente!')
   }
 
-  const instructor = {
-    ...foundInstructor,
-    birth: date(foundInstructor.birth)
+  const member = {
+    ...foundMember,
+    birth: date(foundMember.birth)
   }
 
-  return res.render('instructors/edit', { instructor })
+  return res.render('members/edit', { member })
 }
 
-//PUT
+// PUT
 exports.put = function(req, res){
 
   const { id } = req.body
   let index = 0
   
-  const foundInstructor = data.instructors.find(function(instructor, foundIndex){
-    if(id == instructor.id){
+  const foundMember = data.members.find(function(member, foundIndex){
+    if(id == member.id){
       index = foundIndex
       return true
     }
   })
 
-  if(!foundInstructor){
-    return res.send('Instrutor não encontrado, por favor, tente novamente!')
+  if(!foundMember){
+    return res.send('Membro não encontrado, por favor, tente novamente!')
   }
 
-  const instructor = {
-    ...foundInstructor, //espalhando tudo que vinheram do instructor
+  const member = {
+    ...foundMember, //espalhando tudo que vinheram do member
     ...req.body, //espalhando tudo que foi trazido pelo req.body
     birth: Date.parse(req.body.birth), //data de aniversario
     id: Number(req.body.id) //Transforma todo ID em numero
   }
 
-  data.instructors[index] = instructor
+  data.members[index] = member
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if(err){
       return res.send("Escrita Errada!")
     }
-    return res.redirect(`/instructors/${id}`)
+    return res.redirect(`/members/${id}`)
   })
 
 }
@@ -127,17 +130,17 @@ exports.delete = function(req, res){
   const { id } = req.body
 
   //Filter = metodo que filtra as informações
-  const filterdInstructors = data.instructors.filter(function(instructor){
-    return instructor.id != id
+  const filterdMembers = data.members.filter(function(member){
+    return member.id != id
   })
 
-  data.instructors = filterdInstructors
+  data.members = filterdMembers
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if(err){
       return res.send("Escrita Errada!")
     }
-    return res.redirect('/instructors')
+    return res.redirect('/members')
   })
 }
 
