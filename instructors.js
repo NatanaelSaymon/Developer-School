@@ -2,6 +2,12 @@ const fs = require('fs')
 const data = require('./data.json')
 const { age, date } = require('./utils')
 
+// INDEX
+exports.index = function(req, res){
+  return res.render('instructors/index', { instructors: data.instructors })
+}
+
+
 //CREATE
 exports.post = function(req, res){
   const keys = Object.keys(req.body)
@@ -86,22 +92,23 @@ exports.put = function(req, res){
 
   const { id } = req.body
   let index = 0
-
+  
   const foundInstructor = data.instructors.find(function(instructor, foundIndex){
     if(id == instructor.id){
       index = foundIndex
       return true
     }
   })
-  
+
   if(!foundInstructor){
     return res.send('Instrutor não encontrado, por favor, tente novamente!')
   }
 
   const instructor = {
-    ...foundInstructor,
-    ...req.body,
-    birth: Date.parse(req.body.birth)
+    ...foundInstructor, //espalhando tudo que vinheram do instructor
+    ...req.body, //espalhando tudo que foi trazido pelo req.body
+    birth: Date.parse(req.body.birth), //data de aniversario
+    id: Number(req.body.id) //Transforma todo ID em numero
   }
 
   data.instructors[index] = instructor
