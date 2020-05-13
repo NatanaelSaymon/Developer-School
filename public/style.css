@@ -39,6 +39,7 @@ header div.links a + a{
 
 header div.links a.active{
     color: var(--primary-color);
+    font-weight: bold;
 }
 
 header div.links a{
