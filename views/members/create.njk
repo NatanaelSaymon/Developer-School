@@ -1,16 +1,19 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-  <form class="card" method="POST" action="/instructors">
-    <section class="avatar">
+  <form class="card" method="POST" action="/members">
+    <section 
+      class="avatar"
+      style="background-image: url('https://source.unsplash.com/collection/3465564/500x500');"
+    >
       
     </section>
 
     <section class="details">
 
-      <h3>Novo Instrutor</h3>
+      <h3>Novo Membro</h3>
 
-      {% include 'instructors/fields.njk' %}
+      {% include 'members/fields.njk' %}
 
     </section>
 
