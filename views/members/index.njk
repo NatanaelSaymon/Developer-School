@@ -6,20 +6,20 @@
     <table width="100%">
       <thead>
         <tr>
-          <th>Instrutor</th>
+          <th>Membro</th>
           <th>Serviços</th>
           <th>Ação</th>
         </tr>
       </thead>
       <tbody>
-         {% for instructor in instructors %}
+         {% for member in members %}
           <tr>
             <td>
-            <span style="background-image: url({{ instructor.avatar_url }})"></span>
-              {{ instructor.name }}
+            <span style="background-image: url({{ member.avatar_url }})"></span>
+              {{ member.name }}
             </td>
-            <td>{{ instructor.services }}</td>
-            <td><a href="/instructors/{{ instructor.id }}">Ver</a></td>
+            <td>{{ member.services }}</td>
+            <td><a href="/members/{{ member.id }}">Ver</a></td>
           </tr>
         {% endfor %} 
       </tbody>

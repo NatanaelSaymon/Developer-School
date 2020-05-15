@@ -23,21 +23,19 @@ exports.post = function(req, res){
     }
   }
   
-  let { avatar_url, name, birth, services, gender } = req.body
-  
   birth = Date.parse(req.body.birth)
-  const id = Number(data.members.length + 1)
-  const created_at = Date.now() //cria uma data no momento em que está sendo salvo.
   
+  let id = 1
+  const lastMember = data.members[data.members.length - 1]
+  if(lastMember){
+    id = lastMember.id + 1
+  }
+
   data.members.push({
     id,
-    avatar_url,
-    name,
-    birth,
-    gender,
-    services,
-    created_at
-  }) //adiciona objetos no data.JSON
+    ...req.body,
+    birth
+  })
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if(err){

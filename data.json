@@ -1,5 +1,17 @@
 {
-  "members": [],
+  "members": [
+    {
+      "id": 1,
+      "avatar_url": "https://avatars2.githubusercontent.com/u/59451978?s=460&u=47ffa0864ac20b9c929df0a4faf00f0511fc7474&v=4",
+      "name": "Natanael",
+      "email": "saymoneo@gmail.com",
+      "birth": 695001600000,
+      "gender": "M",
+      "blood": "O-",
+      "weight": "70",
+      "height": "175"
+    }
+  ],
   "instructors": [
     {
       "id": 4,
@@ -9,15 +21,6 @@
       "gender": "M",
       "services": "Heroi, One for all",
       "created_at": 1587419875506
-    },
-    {
-      "id": 8,
-      "avatar_url": "https://scontent.fcgh4-1.fna.fbcdn.net/v/t31.0-1/p240x240/23415559_1336807503098281_3695372118175882809_o.jpg?_nc_cat=110&_nc_sid=dbb9e7&_nc_eui2=AeGTsPMfArJ6k8GmBt6iazx9S3GzvEo67ZtLcbO8Sjrtmw7bUVpHMHhOIBISztAQOwSblwlIlkq2pvTjr8X3ULE_&_nc_ohc=hPngKgsm6mkAX-VE6_E&_nc_ht=scontent.fcgh4-1.fna&_nc_tp=6&oh=6067d163f475eb287a01927162ad41f5&oe=5EC7AA80",
-      "name": "Suellen De Souza Pereira",
-      "birth": 669081600000,
-      "gender": "F",
-      "services": "CEO, Esteticista, Vendas, Consultoria",
-      "created_at": 1587601368979
     },
     {
       "id": 9,
@@ -32,28 +35,10 @@
       "id": 10,
       "avatar_url": "https://vignette.wikia.nocookie.net/naruto/images/c/ce/Naruto_Uzumaki_-_Fase_Boruto.png/revision/latest?cb=20180303220658&path-prefix=pt-br",
       "name": "Naruto",
-      "birth": 949363200000,
+      "birth": 633830400000,
       "gender": "M",
       "services": "Hokage",
       "created_at": 1587770549184
-    },
-    {
-      "id": 12,
-      "avatar_url": "https://avatars1.githubusercontent.com/u/42664615?s=460&u=7dbc97652ce8d1160107234d4ec09e50ff158d4e&v=4",
-      "name": "Daniel Rangel Fernandes",
-      "birth": 631929600000,
-      "gender": "M",
-      "services": "Web developer Jr",
-      "created_at": 1587772832915
-    },
-    {
-      "id": 6,
-      "avatar_url": "https://avatars2.githubusercontent.com/u/59451978?s=460&u=47ffa0864ac20b9c929df0a4faf00f0511fc7474&v=4",
-      "name": "Natanael Saymon",
-      "birth": 695001600000,
-      "gender": "M",
-      "services": "Programador Jr",
-      "created_at": 1589141999338
     }
   ]
 }
