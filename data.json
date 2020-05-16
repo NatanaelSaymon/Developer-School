@@ -3,11 +3,22 @@
     {
       "id": 1,
       "avatar_url": "https://avatars2.githubusercontent.com/u/59451978?s=460&u=47ffa0864ac20b9c929df0a4faf00f0511fc7474&v=4",
-      "name": "Natanael",
+      "name": "Natanael Saymon",
       "email": "saymoneo@gmail.com",
       "birth": 695001600000,
       "gender": "M",
       "blood": "O-",
+      "weight": "70",
+      "height": "175"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://avatars1.githubusercontent.com/u/42664615?s=460&u=7dbc97652ce8d1160107234d4ec09e50ff158d4e&v=4",
+      "name": "Daniel Rangel",
+      "email": "daniel@gmail.com",
+      "birth": 631152000000,
+      "gender": "M",
+      "blood": "B+",
       "weight": "70",
       "height": "175"
     }
