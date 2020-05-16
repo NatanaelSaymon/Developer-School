@@ -113,7 +113,7 @@ section.details{
 
 section.details .item{
     border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding: 16px 0;
+    padding: 12px 0;
 }
 
 section.details .item:last-child{
@@ -157,7 +157,7 @@ section.details div.item span{
 
 /* === PAGE CREATE FORM ===*/
 
-form div.item input{
+form div.item input, select{
     width: 100%;
     outline: none;
     color: #555;
@@ -179,7 +179,7 @@ form button[type="submit"], a.button{
     padding: 8px 32px;
     background-color: var(--primary-color);
     border-radius: 4px;
-    margin-top: 32px;
+    margin-top: 15px;
     width: 100%;
     cursor: pointer;
     color: #ffffff;
