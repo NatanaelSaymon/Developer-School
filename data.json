@@ -1,79 +1,65 @@
 {
   "members": [
     {
-      "id": 2,
-      "avatar_url": "https://avatars1.githubusercontent.com/u/42664615?s=460&u=7dbc97652ce8d1160107234d4ec09e50ff158d4e&v=4",
-      "name": "Daniel Rangel Fernandes",
-      "email": "danielfernandes@gmail.com",
-      "birth": 631152000000,
-      "gender": "M",
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "name": "Lívia Souza",
+      "email": "livia@gmail.com",
+      "birth": 926294400000,
+      "gender": "F",
+      "blood": "A-",
+      "weight": "62",
+      "height": "160"
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "name": "Alana Paula",
+      "email": "alana@gmail.com",
+      "birth": 777600000000,
+      "gender": "F",
       "blood": "B+",
+      "weight": "63",
+      "height": "168"
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      "name": "Alex Silva",
+      "email": "alex@gmail.com",
+      "birth": 803174400000,
+      "gender": "M",
+      "blood": "O-",
       "weight": "80",
-      "height": "175"
+      "height": "180"
     }
   ],
   "instructors": [
     {
-      "id": 4,
-      "avatar_url": "https://2.bp.blogspot.com/-h3x_wRJqH54/W6_aMEzEB_I/AAAAAAAAuNI/zdrbocK9PEYiOvaa_a5_pWHMsgf5F_fhACLcBGAs/s1600/Toshinori%2BYagi%2BAll%2BMight.png",
-      "name": "All Might",
-      "birth": 316310400000,
-      "gender": "M",
-      "services": "Heroi, One for all",
-      "created_at": 1587419875506
-    },
-    {
-      "id": 10,
-      "avatar_url": "https://vignette.wikia.nocookie.net/naruto/images/c/ce/Naruto_Uzumaki_-_Fase_Boruto.png/revision/latest?cb=20180303220658&path-prefix=pt-br",
-      "name": "Naruto",
-      "birth": 633830400000,
-      "gender": "M",
-      "services": "Hokage",
-      "created_at": 1587770549184
-    },
-    {
-      "id": 6,
-      "avatar_url": "https://www.comboinfinito.com.br/principal/wp-content/uploads/2018/01/Bleach.jpg",
-      "name": "Aizen Sosuke",
-      "birth": -30609446400000,
-      "gender": "M",
-      "services": "Shinigami",
-      "created_at": 1589655426651
-    },
-    {
-      "id": 5,
-      "avatar_url": "https://i.pinimg.com/originals/33/b7/7b/33b77ba79af3964f2ee067dfe14ffd63.jpg",
-      "name": "Zarack Kenpachi",
-      "birth": -8519558400000,
-      "gender": "M",
-      "services": "Shinigami",
-      "created_at": 1589655605775
-    },
-    {
       "id": 7,
       "avatar_url": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-      "name": "Suellen Souza Pereira",
-      "birth": 695001600000,
-      "gender": "M",
-      "services": "Ginastica",
+      "name": "Isabela Camargo",
+      "birth": 639619200000,
+      "gender": "F",
+      "services": "Dança",
       "created_at": 1591210394453
     },
     {
       "id": 8,
-      "avatar_url": "https://images.unsplash.com/photo-1587691592099-24045742c181?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80",
-      "name": "Herick",
-      "birth": 695001600000,
+      "avatar_url": "https://images.unsplash.com/photo-1561677843-39dee7a319ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      "name": "Herick Santos",
+      "birth": 590976000000,
       "gender": "M",
-      "services": "Ginastica",
+      "services": "Ginastica, Crosfit",
       "created_at": 1591210803583
     },
     {
       "id": 9,
       "avatar_url": "https://images.unsplash.com/flagged/photo-1557896279-080cb03b9ca6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      "name": "Ailton",
-      "birth": 695001600000,
+      "name": "Ailton Souza",
+      "birth": 320284800000,
       "gender": "M",
-      "services": "Ginastica",
+      "services": "Meditação",
       "created_at": 1591210887456
     }
   ]
