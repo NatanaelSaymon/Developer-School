@@ -25,7 +25,13 @@ exports.post = function(req, res){
   let { avatar_url, name, birth, services, gender } = req.body
   
   birth = Date.parse(req.body.birth)
-  const id = Number(data.instructors.length + 1)
+  
+  let id = 1 
+  const lastId = data.instructors[data.instructors.length - 1]
+  if(lastId){
+    id = lastId.id + 1
+  }
+  
   const created_at = Date.now() //cria uma data no momento em que está sendo salvo.
   
   data.instructors.push({
