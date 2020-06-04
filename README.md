@@ -123,8 +123,8 @@ Use o npm como seu gerenciador de pacotes para instalar as dependencias do proje
 - Server/Backend
   - <img src="https://img.shields.io/badge/express-^4.17.1-green"/>
   - <img src="https://img.shields.io/badge/nodemon-^2.0.2-green"/>
-  - <img src="https://img.shields.io/badge/browser-sync-^2.26.7-green"/>
-  - <img src="https://img.shields.io/badge/method-override-^3.0.0-green"/>
+  - <img src="https://img.shields.io/badge/browsersync-^2.26.7-green"/>
+  - <img src="https://img.shields.io/badge/methodoverride-^3.0.0-green"/>
 
 
 - Web/Frontend
