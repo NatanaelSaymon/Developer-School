@@ -14,90 +14,118 @@ Aqui é exibido todos os instrutores cadastrado na aplicação. Clicando no bot�
 
 </div>
 
----
 
 ## Criando um novo Instrutor
 
 Clicando no botão "Novo" seremos redirecionados para essa página, onde poderemos criar um novo instrutor.
+
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/NatanaelSaymon/Gym-Manager/master/public/image/img-page-instructors-create.png">
 
 </div>
 
----
 
+## Mostrando os dados do Instrutor
+
+Essa página exibe as informações cadastradas de um Instrutor.
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/NatanaelSaymon/Gym-Manager/master/public/image/img-page-instructors-show.png">
 
 </div>
 
----
 
+## Edição de dados
+
+Nessa página podemos alterar as informações do Instrutor.
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/NatanaelSaymon/Gym-Manager/master/public/image/img-page-instructors-edit.png">
 
 </div>
 
----
 
+## Deletar
+
+Clicando no botão de "deletar", teremos que confirmar se realmente queremos executar essa ação.
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/NatanaelSaymon/Gym-Manager/master/public/image/img-page-instructors-delete.png">
 
 </div>
 
+## Página de Membros
+
+Aqui é exibido todos os membros cadastrado na aplicação. Clicando no botão "Novo" poderemos inserir um novo Membro. Clicando em "Ver" poderemos ver todas as informações do Membro selecionado.
 
 <div align="center">
 
-<img src="https://github.com/NatanaelSaymon/Gym-Manager/blob/master/public/image/img-page-members.png?raw=true">
+<img src="https://raw.githubusercontent.com/NatanaelSaymon/Gym-Manager/master/public/image/img-page-members.png">
 
 </div>
 
 
-<div align="center">
+## Criando um novo Membro
 
-<img src="https://github.com/NatanaelSaymon/Gym-Manager/blob/master/public/image/img-page-members-create.png?raw=true">
-
-</div>
+Clicando no botão "Novo" seremos redirecionados para essa página, onde poderemos criar um novo mebro.
 
 <div align="center">
 
-<img src="https://github.com/NatanaelSaymon/Gym-Manager/blob/master/public/image/img-page-members-show.png?raw=true">
+<img src="https://raw.githubusercontent.com/NatanaelSaymon/Gym-Manager/master/public/image/img-page-members-create.png">
 
 </div>
 
+## Mostrando os dados do Membro
+
+Essa página exibe as informações cadastradas de um Membro.
 
 <div align="center">
 
-<img src="https://github.com/NatanaelSaymon/Gym-Manager/blob/master/public/image/img-page-members-edit.png?raw=true">
+<img src="https://raw.githubusercontent.com/NatanaelSaymon/Gym-Manager/master/public/image/img-page-members-show.png">
 
 </div>
 
----
+## Edição de dados
+
+Nessa página podemos alterar as informações do Membro.
 
 <div align="center">
 
-<img src="https://github.com/NatanaelSaymon/Gym-Manager/blob/master/public/image/img-page-members-delete.png?raw=true">
+<img src="https://raw.githubusercontent.com/NatanaelSaymon/Gym-Manager/master/public/image/img-page-members-edit.png">
 
 </div>
 
----
+## Deletar
+
+Clicando no botão de "deletar", teremos que confirmar se realmente queremos executar essa ação.
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/NatanaelSaymon/Gym-Manager/master/public/image/img-page-members-delete.png">
+
+</div>
+
+
 
 ## Stack
+* HTML
+* CSS
+* Javascript
+* Nunjucks
 * NodeJS
 
 ## Dependencias
-Use o npm como seu gerenciador de pacotes.
+Use o npm como seu gerenciador de pacotes para instalar as dependencias do projeto.
 ````
   npm install
 ````
 - Server/Backend
   - <img src="https://img.shields.io/badge/express-^4.17.1-green"/>
   - <img src="https://img.shields.io/badge/nodemon-^2.0.2-green"/>
-  - <img src="https://img.shields.io/badge/sqlite3-^4.1.1-green"/>
+  - <img src="https://img.shields.io/badge/browser-sync-^2.26.7-green"/>
+  - <img src="https://img.shields.io/badge/method-override-^3.0.0-green"/>
+
 
 - Web/Frontend
   - <img src="https://img.shields.io/badge/nunjucks-^3.2.1-blue"/>
