@@ -18,11 +18,12 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: var(--primary-color);
+    background-color: #000;
+    background-image: url('../image/bk.png');
 }
 
 header{
-    background: #fff;
+    background: #1f1d1d;
     width: 100%;
     padding: 32px;
     text-align: center;
@@ -44,7 +45,7 @@ header div.links a.active{
 
 header div.links a{
     text-decoration: none;
-    color: #777;
+    color: #fff;
     position: relative;
 }
 
@@ -65,7 +66,8 @@ header div.links a:hover::after{
 
 /* === INSTRUCTORS - CARD === */
 .card{
-    background-color: #ffffff;
+    background-color: #1f1d1d;
+    color: #fff;
     width: 800px;
     min-height: 400px;
     /*Espaçamento ao centro*/
@@ -74,7 +76,7 @@ header div.links a:hover::after{
     display: grid;
     grid-template-columns: 1fr 1fr;
     /*Sombra*/
-    box-shadow: 0px 2px 6px -2px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 14px 0px #7159c1;
     /*
     1º valor: eixo X
     2º valor: eixo Y
@@ -99,7 +101,6 @@ header div.links a:hover::after{
 }
 
 section.avatar{
-    /* background-image: url('https://source.unsplash.com/collection/3465564/500x500'); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -124,13 +125,13 @@ section.details h3,
 section.details .item div:nth-child(1){
     font-size: 14px;
     line-height: 24px;
-    color: #777;
+    color: #fff;
     letter-spacing: 0.7px; /*ESPAÇAMENTO ENTRE LETRAS*/
     font-weight: normal;
 }
 
 section.details .item div:nth-child(2){
-    color: #555;
+    color: #fff;
     font-weight: bold;
     font-size: 18px;
 }
@@ -159,8 +160,9 @@ section.details div.item span{
 
 form div.item input, select{
     width: 100%;
+    background-color: #1f1d1d;
     outline: none;
-    color: #555;
+    color: #fff;
     font-weight: bold;
     font-size: 18px;
 }
@@ -220,7 +222,7 @@ a.button{
 
 .table-container th{
     text-transform: uppercase;
-    color: #777;
+    color: #fff;
     font-size: 14px;
 }
 

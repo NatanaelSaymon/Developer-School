@@ -24,7 +24,6 @@ exports.post = function(req, res){
   }
   
   let { avatar_url, name, birth, services, gender } = req.body
-  
   birth = Date.parse(req.body.birth)
   
   let id = 1 
@@ -35,15 +34,7 @@ exports.post = function(req, res){
   
   const created_at = Date.now() //cria uma data no momento em que está sendo salvo.
   
-  data.instructors.push({
-    id,
-    avatar_url,
-    name,
-    birth,
-    gender,
-    services,
-    created_at
-  }) //adiciona objetos no data.JSON
+  data.instructors.push({id, avatar_url, name, birth, gender, services, created_at}) //adiciona objetos no data.JSON
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if(err){
