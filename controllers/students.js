@@ -55,7 +55,7 @@ exports.show = function(req, res){
   })
 
   if(!foundstudent){
-    return res.send('Membro não encontrado, por favor, tente novamente!')
+    return res.send('Student not found!')
   }
   
   //Ajustando os dados
@@ -77,7 +77,7 @@ exports.edit = function(req, res){
   })
 
   if(!foundstudent){
-    return res.send('Membro não encontrado, por favor, tente novamente!')
+    return res.send('Student not found!')
   }
 
   const student = {
@@ -102,7 +102,7 @@ exports.put = function(req, res){
   })
 
   if(!foundstudent){
-    return res.send('Membro não encontrado, por favor, tente novamente!')
+    return res.send('Student not found!')
   }
 
   const student = {

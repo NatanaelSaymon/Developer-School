@@ -54,7 +54,7 @@ exports.show = function(req, res){
   })
 
   if(!foundteacher){
-    return res.send('Instrutor não encontrado, por favor, tente novamente!')
+    return res.send('Teacher not found!')
   }
   
   //Ajustando os dados
@@ -78,7 +78,7 @@ exports.edit = function(req, res){
   })
 
   if(!foundteacher){
-    return res.send('Instrutor não encontrado, por favor, tente novamente!')
+    return res.send('Teacher not found!')
   }
 
   const teacher = {
@@ -103,7 +103,7 @@ exports.put = function(req, res){
   })
 
   if(!foundteacher){
-    return res.send('Instrutor não encontrado, por favor, tente novamente!')
+    return res.send('Teacher not found!')
   }
 
   const teacher = {
