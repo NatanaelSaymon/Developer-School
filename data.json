@@ -1,9 +1,9 @@
 {
-  "members": [
+  "students": [
     {
       "id": 3,
       "avatar_url": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      "name": "Lívia Souza Pereira",
+      "name": "Lívia Souza",
       "email": "livia@gmail.com",
       "birth": 926294400000,
       "gender": "F",
@@ -34,13 +34,14 @@
       "height": "188"
     }
   ],
-  "instructors": [
+  "teachers": [
     {
       "id": 7,
       "avatar_url": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
       "name": "Isabela Camargo",
-      "birth": 639619200000,
-      "gender": "F",
+      "birth": 324086400000,
+      "nivel": "mestrado",
+      "typeclass": "P",
       "services": "Dança",
       "created_at": 1591210394453
     },
@@ -49,7 +50,8 @@
       "avatar_url": "https://images.unsplash.com/photo-1561677843-39dee7a319ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
       "name": "Herick Nascimento",
       "birth": 590976000000,
-      "gender": "M",
+      "nivel": "superior",
+      "typeclass": "A",
       "services": "Ginastica",
       "created_at": 1591210803583
     },
@@ -58,9 +60,20 @@
       "avatar_url": "https://images.unsplash.com/photo-1517343985841-f8b2d66e010b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
       "name": "Fernando Diniz",
       "birth": 631929600000,
-      "gender": "M",
+      "nivel": "doutorado",
+      "typeclass": "P",
       "services": "Crossfit",
       "created_at": 1591297390962
+    },
+    {
+      "id": 11,
+      "avatar_url": "https://avatars2.githubusercontent.com/u/59451978?s=460&u=47ffa0864ac20b9c929df0a4faf00f0511fc7474&v=4",
+      "name": "Natanael Saymon",
+      "birth": 695001600000,
+      "nivel": "medio",
+      "typeclass": "P",
+      "services": "Programação",
+      "created_at": 1592852106355
     }
   ]
 }

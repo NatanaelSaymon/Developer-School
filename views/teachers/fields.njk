@@ -5,18 +5,17 @@
       type="url" 
       name="avatar_url" 
       placeholder="http://" 
-      value="{{ instructor.avatar_url }}">
+      value="{{ teacher.avatar_url }}">
   </div>
 </div>
 
 <div class="item">
-  <div>Instrutor</div>
+  <div>Professor</div>
   <div>
     <input 
       type="text" 
       name="name" 
-      placeholder="Nome do instrutor" 
-      value="{{ instructor.name }}">
+      value="{{ teacher.name }}">
   </div>
 </div>
 
@@ -26,32 +25,44 @@
     <input 
       type="date" 
       name="birth"
-      value="{{ instructor.birth }}">
+      value="{{ teacher.birth }}">
   </div>
 </div>
 
 <div class="item">
-  <div>Sexo</div>
+  <div>Grau de Escolaridade</div>
+  <div>
+    <select name="nivel">
+      <option value="medio">Ensino Medio</option>
+      <option value="superior">Ensino Superior</option>
+      <option value="mestrado">Mestrado</option>
+      <option value="doutorado">Doutorado</option>
+    </select>
+  </div>
+</div>
+
+<div class="item">
+  <div>Tipo de Aula</div>
   <div>
     <span>
       <input 
         type="radio" 
-        name="gender" 
-        value="M" 
-        {% if instructor.gender == "M" %}
+        name="typeclass" 
+        value="P" 
+        {% if teacher.typeclass == "P" %}
           checked
         {% endif %}>
-        Masculino
+        Presencial
     </span>
     <span>
       <input 
         type="radio" 
-        name="gender" 
-        value="F"
-        {% if instructor.gender == "F" %}
+        name="typeclass" 
+        value="D"
+        {% if teacher.typeclass == "D" %}
           checked
         {% endif %}>
-        Feminino
+        Á Distância
     </span>
   </div>
 </div>
@@ -62,7 +73,7 @@
       <input 
         type="text" 
         name="services" 
-        value="{{ instructor.services }}">
+        value="{{ teacher.services }}">
   </div>
 </div>
 

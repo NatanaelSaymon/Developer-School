@@ -5,7 +5,7 @@
   <div class="card">
     <section 
       class="avatar"
-      style="background-image: url({{ member.avatar_url }})"
+      style="background-image: url({{ student.avatar_url }})"
     >
     </section>
 
@@ -13,41 +13,41 @@
       <h3>Detalhes</h3>
 
       <div class="item">
-        <div>Membro</div>
-        <div>{{ member.name }}</div>
+        <div>Estudante</div>
+        <div>{{ student.name }}</div>
       </div>
 
       <div class="item">
         <div>Email</div>
-        <div>{{ member.email }}</div>
+        <div>{{ student.email }}</div>
       </div>
 
       <div class="item">
         <div>Aniversario</div>
-        <div>{{ member.birth }}</div>
+        <div>{{ student.birth }}</div>
       </div>
 
       <div class="item">
         <div>Sexo</div>
-        <div>{{ "Masculino" if member.gender == "M" else "Feminino" }}</div>
+        <div>{{ "Masculino" if student.gender == "M" else "Feminino" }}</div>
       </div>
 
       <div class="item">
         <div>Tipo Sanguínero</div>
-        <div>{{ member.blood }}</div>
+        <div>{{ student.blood }}</div>
       </div>
 
       <div class="item">
         <div>Peso(Kg)</div>
-        <div>{{ member.weight }}</div>
+        <div>{{ student.weight }}</div>
       </div>
 
       <div class="item">
         <div>Altura(cm)</div>
-        <div>{{ member.height }}</div>
+        <div>{{ student.height }}</div>
       </div>
 
-      <a href="/members/{{ member.id }}/edit" class="button">Editar</a>
+      <a href="/students/{{ student.id }}/edit" class="button">Editar</a>
     </section>
   </div>
 

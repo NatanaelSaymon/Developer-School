@@ -5,17 +5,17 @@
       type="url" 
       name="avatar_url" 
       placeholder="http://" 
-      value="{{ member.avatar_url }}">
+      value="{{ student.avatar_url }}">
   </div>
 </div>
 
 <div class="item">
-  <div>Membro</div>
+  <div>Estudante</div>
   <div>
     <input 
       type="text" 
       name="name" 
-      value="{{ member.name }}">
+      value="{{ student.name }}">
   </div>
 </div>
 
@@ -25,7 +25,7 @@
     <input 
       type="email" 
       name="email"  
-      value="{{ member.email }}">
+      value="{{ student.email }}">
   </div>
 </div>
 
@@ -35,7 +35,7 @@
     <input 
       type="date" 
       name="birth"
-      value="{{ member.birth }}">
+      value="{{ student.birth }}">
   </div>
 </div>
 
@@ -45,14 +45,14 @@
     <span>
       <input 
         type="radio" name="gender" value="M" 
-        {% if member.gender == "M" %}
+        {% if student.gender == "M" %}
           checked
         {% endif %}>Masculino
     </span>
     <span>
       <input 
         type="radio" name="gender" value="F" 
-        {% if member.gender == "F" %} 
+        {% if student.gender == "F" %} 
           checked 
         {% endif %}>Feminino
     </span>
@@ -63,14 +63,14 @@
   <div>Tipo sanguíneo</div>
   <div>
     <select name="blood">
-      <option value="A-" {% if member.blood == "A-" %} selected {% endif %}> A- </option>
-      <option value="A+" {% if member.blood == "A+" %} selected {% endif %}> A+ </option>
-      <option value="B-" {% if member.blood == "B-" %} selected {% endif %}> B- </option>
-      <option value="B+" {% if member.blood == "B+" %} selected {% endif %}> B+ </option>
-      <option value="AB-" {% if member.blood == "A0-" %} selected {% endif %}> AB -</option>
-      <option value="AB+" {% if member.blood == "AB+" %} selected {% endif %}> AB +</option>
-      <option value="O-" {% if member.blood == "O-" %} selected {% endif %}> O- </option>
-      <option value="O+" {% if member.blood == "O+" %} selected {% endif %}> O+ </option>
+      <option value="A-" {% if student.blood == "A-" %} selected {% endif %}> A- </option>
+      <option value="A+" {% if student.blood == "A+" %} selected {% endif %}> A+ </option>
+      <option value="B-" {% if student.blood == "B-" %} selected {% endif %}> B- </option>
+      <option value="B+" {% if student.blood == "B+" %} selected {% endif %}> B+ </option>
+      <option value="AB-" {% if student.blood == "A0-" %} selected {% endif %}> AB -</option>
+      <option value="AB+" {% if student.blood == "AB+" %} selected {% endif %}> AB +</option>
+      <option value="O-" {% if student.blood == "O-" %} selected {% endif %}> O- </option>
+      <option value="O+" {% if student.blood == "O+" %} selected {% endif %}> O+ </option>
     </select>
   </div>
 </div>
@@ -81,7 +81,7 @@
     <input 
       type="number" 
       name="weight"
-      value="{{ member.weight }}">
+      value="{{ student.weight }}">
   </div>
 </div>
 
@@ -91,7 +91,7 @@
     <input 
       type="number" 
       name="height"
-      value="{{ member.height }}">
+      value="{{ student.height }}">
   </div>
 </div>
 

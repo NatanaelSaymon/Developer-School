@@ -5,12 +5,12 @@ const Intl = require('intl')
 
 // INDEX
 exports.index = function(req, res){
-  return res.render('instructors/index', { instructors: data.instructors })
+  return res.render('teachers/index', { teachers: data.teachers })
 }
 
 // CREATE
 exports.create = function(req, res){
-  return res.render('instructors/create')
+  return res.render('teachers/create')
 }
 
 // POST
@@ -23,24 +23,24 @@ exports.post = function(req, res){
     }
   }
   
-  let { avatar_url, name, birth, services, gender } = req.body
+  let { avatar_url, name, birth, services, typeclass, nivel } = req.body
   birth = Date.parse(req.body.birth)
   
   let id = 1 
-  const lastId = data.instructors[data.instructors.length - 1]
+  const lastId = data.teachers[data.teachers.length - 1]
   if(lastId){
     id = lastId.id + 1
   }
   
   const created_at = Date.now() //cria uma data no momento em que está sendo salvo.
   
-  data.instructors.push({id, avatar_url, name, birth, gender, services, created_at}) //adiciona objetos no data.JSON
+  data.teachers.push({id, avatar_url, name, birth, nivel, typeclass, services, created_at}) //adiciona objetos no data.JSON
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if(err){
       return res.send("Erro de escrita!")
     }
-    return res.redirect("/instructors")
+    return res.redirect("/teachers")
   })
   
 }
@@ -49,23 +49,23 @@ exports.post = function(req, res){
 exports.show = function(req, res){
   const { id } = req.params //desestruturando: retirando o ID de req.params e fazendo que seja uma variavel.
 
-  const foundInstructor = data.instructors.find(function(instructor){
-    return instructor.id == id
+  const foundteacher = data.teachers.find(function(teacher){
+    return teacher.id == id
   })
 
-  if(!foundInstructor){
+  if(!foundteacher){
     return res.send('Instrutor não encontrado, por favor, tente novamente!')
   }
   
   //Ajustando os dados
-  const instructor = {
-    ...foundInstructor,
-    age: age(foundInstructor.birth),
-    services: foundInstructor.services.split(","),
-    created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at)
+  const teacher = {
+    ...foundteacher,
+    age: age(foundteacher.birth),
+    services: foundteacher.services.split(","),
+    created_at: new Intl.DateTimeFormat('pt-BR').format(foundteacher.created_at)
   }
 
-  return res.render("instructors/show", { instructor })
+  return res.render("teachers/show", { teacher })
 
 }
 
@@ -73,20 +73,20 @@ exports.show = function(req, res){
 exports.edit = function(req, res){
   const { id } = req.params 
 
-  const foundInstructor = data.instructors.find(function(instructor){
-    return instructor.id == id
+  const foundteacher = data.teachers.find(function(teacher){
+    return teacher.id == id
   })
 
-  if(!foundInstructor){
+  if(!foundteacher){
     return res.send('Instrutor não encontrado, por favor, tente novamente!')
   }
 
-  const instructor = {
-    ...foundInstructor,
-    birth: date(foundInstructor.birth).iso
+  const teacher = {
+    ...foundteacher,
+    birth: date(foundteacher.birth).iso
   }
 
-  return res.render('instructors/edit', { instructor })
+  return res.render('teachers/edit', { teacher })
 }
 
 // PUT
@@ -95,31 +95,31 @@ exports.put = function(req, res){
   const { id } = req.body
   let index = 0
   
-  const foundInstructor = data.instructors.find(function(instructor, foundIndex){
-    if(id == instructor.id){
+  const foundteacher = data.teachers.find(function(teacher, foundIndex){
+    if(id == teacher.id){
       index = foundIndex
       return true
     }
   })
 
-  if(!foundInstructor){
+  if(!foundteacher){
     return res.send('Instrutor não encontrado, por favor, tente novamente!')
   }
 
-  const instructor = {
-    ...foundInstructor, //espalhando tudo que vinheram do instructor
+  const teacher = {
+    ...foundteacher, //espalhando tudo que vinheram do teacher
     ...req.body, //espalhando tudo que foi trazido pelo req.body
     birth: Date.parse(req.body.birth), //data de aniversario
     id: Number(req.body.id) //Transforma todo ID em numero
   }
 
-  data.instructors[index] = instructor
+  data.teachers[index] = teacher
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if(err){
       return res.send("Escrita Errada!")
     }
-    return res.redirect(`/instructors/${id}`)
+    return res.redirect(`/teachers/${id}`)
   })
 
 }
@@ -129,17 +129,17 @@ exports.delete = function(req, res){
   const { id } = req.body
 
   //Filter = metodo que filtra as informações
-  const filterdInstructors = data.instructors.filter(function(instructor){
-    return instructor.id != id
+  const filterdteachers = data.teachers.filter(function(teacher){
+    return teacher.id != id
   })
 
-  data.instructors = filterdInstructors
+  data.teachers = filterdteachers
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if(err){
       return res.send("Escrita Errada!")
     }
-    return res.redirect('/instructors')
+    return res.redirect('/teachers')
   })
 }
 

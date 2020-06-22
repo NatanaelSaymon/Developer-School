@@ -1,0 +1,32 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <div class="card">
+    <section 
+      class="avatar"
+      style="background-image:url({{ student.avatar_url }})"
+    >
+          
+    </section>
+
+    <section class="details">
+      <form method="POST" action="/students?_method=PUT">
+          <h3>Editar Estudande</h3>
+
+          {% include 'students/fields.njk' %}
+
+          <input type="hidden" name="id" value="{{ student.id }}">
+      </form>
+
+      <form id="form-delete" method="POST" action="/students?_method=DELETE">
+        <input type="hidden" name="id" value="{{ student.id }}">
+        <button type="submit">Deletar</button>
+      </form>
+
+      {% include 'teachers/delete.njk' %}
+
+    </section>
+  </div>
+  
+{% endblock content %}
