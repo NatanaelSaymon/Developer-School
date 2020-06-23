@@ -1,6 +1,6 @@
 module.exports = {
   //Logica da data
-  age: function(timestamp){
+  age(timestamp){
     const today = new Date() //data de hoje
     const birthDate = new Date(timestamp) //data do aniversario da pessoa
   
@@ -18,7 +18,7 @@ module.exports = {
     return age
   },
 
-  date: function(timestamp){
+  date(timestamp){
 
     const date = new Date(timestamp)
     const year = date.getUTCFullYear()
