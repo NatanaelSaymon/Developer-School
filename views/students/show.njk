@@ -33,18 +33,31 @@
       </div>
 
       <div class="item">
-        <div>Tipo Sanguínero</div>
-        <div>{{ student.blood }}</div>
+        <div>Ano Escolar</div>
+        <div>
+          {% if student.grade == "5AEF" %}
+            5º Ano do Ensino Fundamental
+          {% elseif student.grade == "6AEF" %}
+            6º Ano do Ensino Fundamental
+          {% elseif student.grade == "7AEF" %}
+            7º Ano do Ensino Fundamental
+          {% elseif student.grade == "8AEF" %}
+            8º Ano do Ensino Fundamental
+          {% elseif student.grade == "9AEF" %}
+            9º Ano do Ensino Fundamental
+          {% elseif student.grade == "1AEM" %}
+            1º Ano do Ensino Medio
+          {% elseif student.grade == "2AEM" %}
+            2º Ano do Ensino Medio
+          {% else %}
+            3º Ano do Ensino Medio
+          {% endif %}
+        </div>
       </div>
 
       <div class="item">
-        <div>Peso(Kg)</div>
-        <div>{{ student.weight }}</div>
-      </div>
-
-      <div class="item">
-        <div>Altura(cm)</div>
-        <div>{{ student.height }}</div>
+        <div>Carga Horaria</div>
+        <div>{{ student.workload }}</div>
       </div>
 
       <a href="/students/{{ student.id }}/edit" class="button">Editar</a>

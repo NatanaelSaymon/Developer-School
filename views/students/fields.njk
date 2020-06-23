@@ -60,38 +60,28 @@
 </div>
 
 <div class="item">
-  <div>Tipo sanguíneo</div>
+  <div>Ano Escolar</div>
   <div>
-    <select name="blood">
-      <option value="A-" {% if student.blood == "A-" %} selected {% endif %}> A- </option>
-      <option value="A+" {% if student.blood == "A+" %} selected {% endif %}> A+ </option>
-      <option value="B-" {% if student.blood == "B-" %} selected {% endif %}> B- </option>
-      <option value="B+" {% if student.blood == "B+" %} selected {% endif %}> B+ </option>
-      <option value="AB-" {% if student.blood == "A0-" %} selected {% endif %}> AB -</option>
-      <option value="AB+" {% if student.blood == "AB+" %} selected {% endif %}> AB +</option>
-      <option value="O-" {% if student.blood == "O-" %} selected {% endif %}> O- </option>
-      <option value="O+" {% if student.blood == "O+" %} selected {% endif %}> O+ </option>
+    <select name="grade">
+      <option value="5AEF" {% if student.carga == "5AEF "%} selected {% endif %}>5º Ano do Ensino Fundamental</option>
+      <option value="6AEF" {% if student.carga == "6AEF "%} selected {% endif %}>6º Ano do Ensino Fundamental</option>
+      <option value="7AEF" {% if student.carga == "7AEF "%} selected {% endif %}>7º Ano do Ensino Fundamental</option>
+      <option value="8AEF" {% if student.carga == "8AEF "%} selected {% endif %}>8º Ano do Ensino Fundamental</option>
+      <option value="9AEF" {% if student.carga == "9AEF "%} selected {% endif %}>9º Ano do Ensino Fundamental</option>
+      <option value="1AEM" {% if student.carga == "1AEF "%} selected {% endif %}>1º Ano do Ensino Medio</option>
+      <option value="2AEM" {% if student.carga == "2AEF "%} selected {% endif %}>2º Ano do Ensino Medio</option>
+      <option value="3AEM" {% if student.carga == "3AEF "%} selected {% endif %}>3º Ano do Ensino Medio</option>
     </select>
   </div>
 </div>
 
 <div class="item">
-  <div>Peso(kg)</div>
+  <div>Carga Horaria Semanal</div>
   <div>
     <input 
       type="number" 
-      name="weight"
-      value="{{ student.weight }}">
-  </div>
-</div>
-
-<div class="item">
-  <div>Altura(cm)</div>
-  <div>
-    <input 
-      type="number" 
-      name="height"
-      value="{{ student.height }}">
+      name="workload"
+      value="{{ student.workload }}">
   </div>
 </div>
 

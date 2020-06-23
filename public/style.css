@@ -17,9 +17,13 @@
 
 
 body{
+    height: 100vh;
     font-family: 'Roboto', sans-serif;
     background-color: #000;
     background-image: url('../image/bk.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 header{

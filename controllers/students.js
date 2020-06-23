@@ -32,7 +32,7 @@ exports.post = function(req, res){
   }
 
   data.students.push({
-    id,
+    id, 
     ...req.body,
     birth
   })

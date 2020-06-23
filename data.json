@@ -1,79 +1,46 @@
 {
   "students": [
     {
-      "id": 3,
-      "avatar_url": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      "name": "Lívia Souza",
-      "email": "livia@gmail.com",
-      "birth": 926294400000,
-      "gender": "F",
-      "blood": "A-",
-      "weight": "65",
-      "height": "165"
-    },
-    {
-      "id": 4,
-      "avatar_url": "https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      "name": "Alana Paula",
-      "email": "alana@gmail.com",
-      "birth": 777600000000,
-      "gender": "F",
-      "blood": "B+",
-      "weight": "63",
-      "height": "168"
-    },
-    {
-      "id": 6,
-      "avatar_url": "https://images.unsplash.com/photo-1583500178964-98351600826a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      "name": "Fabrício Souza",
-      "email": "fabricio@gmail.com",
-      "birth": 915926400000,
+      "id": 1,
+      "avatar_url": "https://avatars2.githubusercontent.com/u/59451978?s=460&u=47ffa0864ac20b9c929df0a4faf00f0511fc7474&v=4",
+      "name": "Natanael Saymon",
+      "email": "saymoneo@gmail.com",
+      "birth": 695001600000,
       "gender": "M",
-      "blood": "B+",
-      "weight": "88",
-      "height": "188"
+      "grade": "5AEF",
+      "workload": "180"
     }
   ],
   "teachers": [
     {
       "id": 7,
-      "avatar_url": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      "avatar_url": "https://images.unsplash.com/photo-1573164713350-b14a82d3c15b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       "name": "Isabela Camargo",
       "birth": 324086400000,
-      "nivel": "mestrado",
-      "typeclass": "P",
-      "services": "Dança",
+      "nivel": "medio",
+      "typeclass": "D",
+      "services": "Frameworks",
       "created_at": 1591210394453
     },
     {
       "id": 8,
-      "avatar_url": "https://images.unsplash.com/photo-1561677843-39dee7a319ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-      "name": "Herick Nascimento",
+      "avatar_url": "https://images.unsplash.com/photo-1573497490574-254dcb9318d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "name": "Ana Nascimento",
       "birth": 590976000000,
-      "nivel": "superior",
-      "typeclass": "A",
-      "services": "Ginastica",
+      "nivel": "medio",
+      "typeclass": "D",
+      "services": "HTML5, CSS3",
       "created_at": 1591210803583
     },
     {
       "id": 10,
-      "avatar_url": "https://images.unsplash.com/photo-1517343985841-f8b2d66e010b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      "avatar_url": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       "name": "Fernando Diniz",
       "birth": 631929600000,
-      "nivel": "doutorado",
-      "typeclass": "P",
-      "services": "Crossfit",
-      "created_at": 1591297390962
-    },
-    {
-      "id": 11,
-      "avatar_url": "https://avatars2.githubusercontent.com/u/59451978?s=460&u=47ffa0864ac20b9c929df0a4faf00f0511fc7474&v=4",
-      "name": "Natanael Saymon",
-      "birth": 695001600000,
       "nivel": "medio",
-      "typeclass": "P",
-      "services": "Programação",
-      "created_at": 1592852106355
+      "typeclass": "D",
+      "services": "Jogos RA",
+      "created_at": 1591297390962
     }
   ]
 }
