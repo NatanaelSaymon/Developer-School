@@ -5,10 +5,10 @@
   <div class="card">
     <section 
       class="avatar"
-      style="background-image: url({{ teacher.avatar_url }})"
+      style="background-image: url({{ teachers.avatar_url }})"
       
     >
-      <!--style="background: url({{ teacher.avatar_url }}) no-repeate center center / cover"-->
+      <!--style="background: url({{ teachers.avatar_url }}) no-repeate center center / cover"-->
     </section>
 
     <section class="details">
@@ -16,22 +16,22 @@
 
       <div class="item">
         <div>Professor</div>
-        <div>{{ teacher.name }}</div>
+        <div>{{ teachers.name }}</div>
       </div>
 
       <div class="item">
         <div>Idade</div>
-        <div>{{ teacher.age }} anos</div>
+        <div>{{ teachers.age }} anos</div>
       </div>
 
       <div class="item">
         <div>Grau de Escolaridade</div>
           <div>
-            {% if teacher.nivel == "medio" %}
+            {% if teachers.nivel == "medio" %}
               Ensino Medio
-            {% elseif teacher.nivel == "superior" %}
+            {% elseif teachers.nivel == "superior" %}
               Ensino Superior 
-            {% elseif teacher.nivel == "mestrado" %}
+            {% elseif teachers.nivel == "mestrado" %}
               Mestrado 
             {% else %}
               Doutorado
@@ -41,13 +41,13 @@
 
       <div class="item">
         <div>Tipo de Aula</div>
-        <div>{{ "Presencial" if teacher.typeclass == "P" else "Á Distância" }}</div>
+        <div>{{ "Presencial" if teachers.typeclass == "P" else "Á Distância" }}</div>
       </div>
 
       <div class="item">
         <div>Acompanhamento</div>
         <div>
-          {% for service in teacher.services %}
+          {% for service in teachers.services %}
             <span>{{ service }}</span>
           {% endfor %}
         </div>
@@ -55,10 +55,10 @@
 
       <div class="item">
         <div>Desde</div>
-        <div>{{ teacher.created_at}}</div>
+        <div>{{ teachers.created_at}}</div>
       </div>
 
-      <a href="/teachers/{{ teacher.id }}/edit" class="button">Editar</a>
+      <a href="/teacherss/{{ teachers.id }}/edit" class="button">Editar</a>
     </section>
   </div>
 

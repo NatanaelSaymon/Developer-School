@@ -1,9 +1,17 @@
 const { age, date } = require('../../lib/utils')
+const db = require('../../config/db')
+
 const Intl = require('intl')
 
 module.exports = {
   index(req, res){
-    return res.render('teachers/index')
+    db.query(`SELECT * FROM teachers ORDER BY name ASC`, function(err, results){
+      if(err){
+        throw `Database Error ${err}`
+      }
+
+      return res.render('teachers/index', { teachers: results.rows })
+    })
   },
 
   create(req, res){
@@ -19,7 +27,36 @@ module.exports = {
       }
     }
     
-    let { avatar_url, name, birth, services, typeclass, nivel } = req.body
+    const query = `
+      INSERT INTO teachers (
+        avatar_url,
+        name,
+        birth,
+        nivel,
+        typeclass,
+        services,
+        created_at
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7)
+      RETURNING id
+    `
+
+    const values = [
+      req.body.avatar_url,
+      req.body.name,
+      date(req.body.birth).iso,
+      req.body.nivel,
+      req.body.typeclass,
+      req.body.services,
+      date(Date.now()).iso
+    ]
+
+    db.query(query, values, function(err, results){
+      if(err){
+        throw `Database Erro ${err}`
+      }
+
+      return res.redirect(`/teachers/${results.rows[0].id}`)
+    })
 
   },
 
