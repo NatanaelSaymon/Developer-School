@@ -1,8 +1,12 @@
+const db = require('../../config/db')
+const Student = require('../models/Student')
 const { date } = require('../../lib/utils')
 
 module.exports = {
   index(req, res){
-    return res.render('students/index')
+    Student.all(function(students){
+      return res.render('students/index', { students })
+    })
   },
   
   create(req, res){

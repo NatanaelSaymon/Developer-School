@@ -5,7 +5,7 @@
   <div class="card">
     <section 
       class="avatar"
-      style="background-image: url({{ student.avatar_url }})"
+      style="background-image: url({{ students.avatar_url }})"
     >
     </section>
 
@@ -14,40 +14,40 @@
 
       <div class="item">
         <div>Estudante</div>
-        <div>{{ student.name }}</div>
+        <div>{{ students.name }}</div>
       </div>
 
       <div class="item">
         <div>Email</div>
-        <div>{{ student.email }}</div>
+        <div>{{ students.email }}</div>
       </div>
 
       <div class="item">
         <div>Aniversario</div>
-        <div>{{ student.birth }}</div>
+        <div>{{ students.birth }}</div>
       </div>
 
       <div class="item">
         <div>Sexo</div>
-        <div>{{ "Masculino" if student.gender == "M" else "Feminino" }}</div>
+        <div>{{ "Masculino" if students.gender == "M" else "Feminino" }}</div>
       </div>
 
       <div class="item">
         <div>Ano Escolar</div>
         <div>
-          {% if student.grade == "5AEF" %}
+          {% if students.grade == "5AEF" %}
             5º Ano do Ensino Fundamental
-          {% elseif student.grade == "6AEF" %}
+          {% elseif students.grade == "6AEF" %}
             6º Ano do Ensino Fundamental
-          {% elseif student.grade == "7AEF" %}
+          {% elseif students.grade == "7AEF" %}
             7º Ano do Ensino Fundamental
-          {% elseif student.grade == "8AEF" %}
+          {% elseif students.grade == "8AEF" %}
             8º Ano do Ensino Fundamental
-          {% elseif student.grade == "9AEF" %}
+          {% elseif students.grade == "9AEF" %}
             9º Ano do Ensino Fundamental
-          {% elseif student.grade == "1AEM" %}
+          {% elseif students.grade == "1AEM" %}
             1º Ano do Ensino Medio
-          {% elseif student.grade == "2AEM" %}
+          {% elseif students.grade == "2AEM" %}
             2º Ano do Ensino Medio
           {% else %}
             3º Ano do Ensino Medio
@@ -57,10 +57,10 @@
 
       <div class="item">
         <div>Carga Horaria</div>
-        <div>{{ student.workload }}</div>
+        <div>{{ students.workload }}</div>
       </div>
 
-      <a href="/students/{{ student.id }}/edit" class="button">Editar</a>
+      <a href="/students/{{ students.id }}/edit" class="button">Editar</a>
     </section>
   </div>
 
