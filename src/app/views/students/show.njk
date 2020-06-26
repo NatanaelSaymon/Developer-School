@@ -5,7 +5,7 @@
   <div class="card">
     <section 
       class="avatar"
-      style="background-image: url({{ students.avatar_url }})"
+      style="background-image: url({{ student.avatar_url }})"
     >
     </section>
 
@@ -14,40 +14,40 @@
 
       <div class="item">
         <div>Estudante</div>
-        <div>{{ students.name }}</div>
+        <div>{{ student.name }}</div>
       </div>
 
       <div class="item">
         <div>Email</div>
-        <div>{{ students.email }}</div>
+        <div>{{ student.email }}</div>
       </div>
 
       <div class="item">
         <div>Aniversario</div>
-        <div>{{ students.birth }}</div>
+        <div>{{ student.birth }}</div>
       </div>
 
       <div class="item">
         <div>Sexo</div>
-        <div>{{ "Masculino" if students.gender == "M" else "Feminino" }}</div>
+        <div>{{ "Masculino" if student.gender == "M" else "Feminino" }}</div>
       </div>
 
       <div class="item">
         <div>Ano Escolar</div>
         <div>
-          {% if students.grade == "5AEF" %}
+          {% if student.grade_school == "5AEF" %}
             5º Ano do Ensino Fundamental
-          {% elseif students.grade == "6AEF" %}
+          {% elseif student.grade_school == "6AEF" %}
             6º Ano do Ensino Fundamental
-          {% elseif students.grade == "7AEF" %}
+          {% elseif student.grade_school == "7AEF" %}
             7º Ano do Ensino Fundamental
-          {% elseif students.grade == "8AEF" %}
+          {% elseif student.grade_school == "8AEF" %}
             8º Ano do Ensino Fundamental
-          {% elseif students.grade == "9AEF" %}
+          {% elseif student.grade_school == "9AEF" %}
             9º Ano do Ensino Fundamental
-          {% elseif students.grade == "1AEM" %}
+          {% elseif student.grade_school == "1AEM" %}
             1º Ano do Ensino Medio
-          {% elseif students.grade == "2AEM" %}
+          {% elseif student.grade_school == "2AEM" %}
             2º Ano do Ensino Medio
           {% else %}
             3º Ano do Ensino Medio
@@ -57,10 +57,15 @@
 
       <div class="item">
         <div>Carga Horaria</div>
-        <div>{{ students.workload }}</div>
+        <div>{{ student.workload }} horas</div>
       </div>
 
-      <a href="/students/{{ students.id }}/edit" class="button">Editar</a>
+      <div class="item">
+        <div>Desde</div>
+        <div>{{ student.created_at }}</div>
+      </div>
+
+      <a href="/students/{{ student.id }}/edit" class="button">Editar</a>
     </section>
   </div>
 
