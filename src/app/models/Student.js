@@ -43,7 +43,7 @@ module.exports = {
         throw `Database Error, ${err}`
       }
 
-      callback(results.rows)
+      callback(results.rows[0])
     })
   },
 
