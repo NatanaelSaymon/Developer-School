@@ -8,6 +8,7 @@
         <tr>
           <th>Professor</th>
           <th>Especialidade</th>
+          <th>Alunos</th>
           <th>Ação</th>
         </tr>
       </thead>
@@ -19,6 +20,7 @@
               {{ teacher.name }}
             </td>
             <td>{{ teacher.services }}</td>
+            <td>{{ teacher.total_students }}</td>
             <td><a href="/teachers/{{ teacher.id }}">Ver</a></td>
           </tr>
         {% endfor %} 

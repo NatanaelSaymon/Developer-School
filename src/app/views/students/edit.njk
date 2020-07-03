@@ -21,7 +21,7 @@
 
       <form id="form-delete" method="POST" action="/students?_method=DELETE">
         <input type="hidden" name="id" value="{{ student.id }}">
-        <button type="submit">Deletar</button>
+        <button type="submit" id="delete">Deletar</button>
       </form>
 
       {% include 'teachers/delete.njk' %}

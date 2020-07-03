@@ -19,9 +19,10 @@
 body{
     height: 100vh;
     font-family: 'Roboto', sans-serif;
-    background-color: #000;
-    background-image: url('../image/bk.png');
-    
+    background-color: #100F12;
+    /* background-image: url('../image/bk.png');
+    background-position: center;
+    background-repeat: no-repeat; */
 }
 
 header{
