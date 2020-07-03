@@ -269,3 +269,42 @@ tbody tr td:last-child a,
 td:last-child{
     text-align: center;
 }
+
+/* === HEADER === */
+
+.table-container .header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.table-container .header a{
+    margin: 0;
+    width: 130px;
+    padding: 10px;
+    text-align: center;
+}
+
+.table-container .header form{
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    grid-gap: 5px;
+}
+
+.table-container .header form input{
+    outline: none;
+    padding: 10px 8px;
+    border-radius: 4px;
+    background: #35353B;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.table-container .header form button{
+    padding: 10px;
+    text-align: center;
+    margin-top: 0;
+}
