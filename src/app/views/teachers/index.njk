@@ -23,7 +23,7 @@
         <tr>
           <th>Professor</th>
           <th>Especialidade</th>
-          <th>Alunos</th>
+          <th class="table-th-center">Alunos</th>
           <th>Ação</th>
         </tr>
       </thead>
@@ -35,11 +35,19 @@
               {{ teacher.name }}
             </td>
             <td>{{ teacher.services }}</td>
-            <td>{{ teacher.total_students }}</td>
+            <td class="table-td-center">{{ teacher.total_students }}</td>
             <td><a href="/teachers/{{ teacher.id }}">Ver</a></td>
           </tr>
         {% endfor %} 
       </tbody>
     </table>
+
+    <div class="pagination-container">
+      <div class="pagination" 
+        data-page={{pagination.page}} 
+        data-total={{pagination.total}}
+        data-filter={{filter}}>
+      </div>
+    </div>
   </div>
 {% endblock content %}

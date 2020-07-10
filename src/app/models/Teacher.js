@@ -116,7 +116,35 @@ module.exports = {
 
       return callback()
     })
+  },
+
+  paginate(params){
+    const { filter, limit, offset, callback} = params
+
+    let query = ""
+    let filterQuery = ""
+    let totalQuery = `(SELECT count(*) FROM teachers) AS total`
+
+    if(filter){
+      filterQuery = 
+      `WHERE teachers.name ILIKE '%${filter}%'
+      OR teachers.services ILIKE '%${filter}%'`
+
+      totalQuery = `(SELECT count(*) FROM teachers ${filterQuery}) AS total`
+    }
+
+    query = `SELECT teachers.*, ${totalQuery},
+    count(students) AS total_students FROM teachers
+    LEFT JOIN students ON (students.teacher_id = teachers.id)
+    ${filterQuery} 
+    GROUP BY teachers.id ORDER BY name ASC
+    LIMIT ${limit} OFFSET ${offset}`
+
+    db.query(query, function(err, results){
+      if(err){
+        throw `Database error: ${err}`
+      }
+      callback(results.rows)
+    })
   }
-
-
 }

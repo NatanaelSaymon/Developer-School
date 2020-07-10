@@ -10,7 +10,7 @@
         <input 
           type="text"
           name="filter"
-          placeholder="Nome"
+          placeholder="Nome ou Email"
           value="{{ filter }}"
         >
 
@@ -38,5 +38,13 @@
         {% endfor %} 
       </tbody>
     </table>
+
+    <div class="pagination-container">
+      <div class="pagination" 
+        data-page={{pagination.page}} 
+        data-total={{pagination.total}}
+        data-filter={{filter}}>
+      </div>
+    </div>
   </div>
 {% endblock content %}

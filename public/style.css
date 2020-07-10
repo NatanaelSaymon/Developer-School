@@ -78,6 +78,7 @@ header div.links a:hover::after{
     /*Divide o elemento ao meio*/
     display: grid;
     grid-template-columns: 40% 60%;
+    border-radius: 15px;
     /*Sombra*/
     box-shadow: 0px 0px 14px 0px #7159c1;
     /*
@@ -104,6 +105,8 @@ header div.links a:hover::after{
 }
 
 section.avatar{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -218,6 +221,11 @@ a.button{
     text-align: left;
 }
 
+.table-container table .table-th-center, 
+.table-container table .table-td-center{
+    text-align: center;
+}
+
 .table-container td, th{
     padding: 16px;
     border-bottom: 2px solid #d9d9d9;
@@ -308,3 +316,14 @@ td:last-child{
     text-align: center;
     margin-top: 0;
 }
+
+.pagination-container{
+    display: grid;
+    justify-items: center;
+}
+
+.pagination-container .pagination a{
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+
